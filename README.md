@@ -51,7 +51,7 @@ npm run dev
 
 ### Building the container locally
 
-This project uses **Docker Composer** to build images that are then used for deployment.
+This project uses **Docker Composer** to build images that are then used for deployment. In order to use this features, Docker needs to be installed locally. This is not strictly necessary for development, as the application can be run via the local development server.
 
 ```bash
 npm run compose:build-local
