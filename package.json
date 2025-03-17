@@ -19,7 +19,6 @@
     "use-debounce": "^10.0.4"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^3.2.5",
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -29,7 +28,6 @@
     "dotenv-cli": "^8.0.0",
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
-    "eslint-plugin-storybook": "^0.11.4",
     "playwright": "^1.51.0",
     "sass": "^1.85.1",
     "sass-embedded": "^1.85.1",
