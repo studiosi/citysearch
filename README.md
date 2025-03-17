@@ -37,8 +37,6 @@ npm install
 
 This is a **Next.js** app, using **SASS Modules** for the styling. It uses **Typescript** and **ESLint** for the enforcement of the code style.
 
-**Storybook** is used for the development and testing of components in isolation.
-
 ## Getting Started
 
 ### Running the development server
