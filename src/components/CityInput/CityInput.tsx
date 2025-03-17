@@ -53,6 +53,7 @@ const CityInput = (): ReactNode => {
     globalData.setPrefix(null);
     globalData.setCityId(null);
     if(cityInputRef.current !== null) cityInputRef.current.value = "";
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, [globalData.countryCode]);
 
   const onInputClick: MouseEventHandler<HTMLInputElement> = (evt) => {
