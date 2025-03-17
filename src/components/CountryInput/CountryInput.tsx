@@ -1,6 +1,6 @@
 "use client"
 
-import {ChangeEventHandler, ReactNode, useCallback, useContext} from "react";
+import {ChangeEventHandler, ReactNode, useContext} from "react";
 import * as countryCodes from "country-codes-list";
 import styles from "./CountryInput.module.scss";
 import {CitySearchGlobalStateContext} from "@/components/CitySearchGlobalState/CitySearchGlobalState";
@@ -13,14 +13,14 @@ const countryList = countryCodes.customList(
 const CountryInput = (): ReactNode => {
   const globalData = useContext(CitySearchGlobalStateContext);
 
-  const inputCountryOnChange: ChangeEventHandler<HTMLSelectElement> = useCallback((evt) => {
+  const inputCountryOnChange: ChangeEventHandler<HTMLSelectElement> = (evt) => {
     const countryCode = evt.currentTarget.value;
     if(countryCode === "XX") {
       globalData.setCountryCode(null);
     } else {
       globalData.setCountryCode(countryCode);
     }
-  }, [])
+  }
 
   return (
     <div className={styles.countryInput}>

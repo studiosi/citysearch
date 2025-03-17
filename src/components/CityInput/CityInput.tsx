@@ -5,7 +5,6 @@ import {
   ChangeEventHandler,
   MouseEventHandler,
   ReactNode,
-  useCallback,
   useContext,
   useEffect,
   useRef,
@@ -56,12 +55,12 @@ const CityInput = (): ReactNode => {
     if(cityInputRef.current !== null) cityInputRef.current.value = "";
   }, [globalData.countryCode]);
 
-  const onInputClick: MouseEventHandler<HTMLInputElement> = useCallback((evt) => {
+  const onInputClick: MouseEventHandler<HTMLInputElement> = (evt) => {
     evt.preventDefault();
     if(cityInputRef.current !== null && cityInputRef.current.value.length >= 3) {
       setShowSuggestions(true);
     }
-  }, [])
+  }
 
   return globalData.countryCode !== null && (
     <div className={styles.cityInput}>
