@@ -1,0 +1,28 @@
+.countryInput {
+  font-family: var(--font-qs), sans-serif;
+  font-size: 1.25rem;
+  box-sizing: border-box;
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  & label {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  & select {
+    font-size: 0.8rem;
+    padding: 5px;
+    font-family: var(--font-qs), sans-serif;
+    border-radius: 0;
+    border: black solid 2px;
+
+    &:focus-visible {
+      outline: none;
+    }
+
+  }
+
+}

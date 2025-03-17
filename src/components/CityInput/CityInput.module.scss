@@ -1,0 +1,50 @@
+.cityInput {
+  font-family: var(--font-qs), sans-serif;
+  font-size: 1.25rem;
+  box-sizing: border-box;
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  z-index: 999;
+
+  & label {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  & input[type=text] {
+    display: block;
+    font-family: var(--font-qs), sans-serif;
+    font-size: 0.8rem;
+    padding: 5px;
+    border-radius: 0;
+    border: black solid 2px;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}
+
+.cityInputSuggestionContainer {
+
+  & .cityInputSuggestion {
+    padding: 5px;
+    border: 1px solid black;
+    border-bottom: none;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid black;
+    }
+
+    & span {
+      font-size: 0.8rem;
+    }
+  }
+}

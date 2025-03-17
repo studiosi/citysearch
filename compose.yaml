@@ -1,0 +1,9 @@
+services:
+  citysearch:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      GEODB_CITIES_BASE_URL: ${GEODB_CITIES_BASE_URL}
+      GEODB_CITIES_HOST: ${GEODB_CITIES_HOST}
+      GEODB_CITIES_KEY: ${GEODB_CITIES_KEY}

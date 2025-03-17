@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CitySearch
+
+## Requirements
+
+### NVM
+
+This project uses **NVM** (Node Version Manager). In order to run the project locally, the following steps are needed:
+
+First, install NVM. Installation instructions can be found in the [project's website](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating).
+
+Once installed, you can run the following command at the root of the project
+
+```bash
+nvm use
+```
+
+This sets the node version to the one used by the project, as specified in the file `.nvmrc` at the root of the project if it is installed locally. Otherwise, it prompts to install it, which can be done with the command
+
+```bash
+nvm install <VERSION>
+```
+
+The required version can be found in said file.
+
+### GeoDB Cities
+
+Access to the GeoDB Cities database is required for the software to work. It can be obtained at [RapidAPI](https://rapidapi.com/hub). The environment variables need to be configured in the file
+`.env.local` with the keys specified in the file `.env.example`. As can be seen, base URL, host and key are needed.
+
+### Dependencies
+
+The dependencies can be installed via **NPM**, using the following command.
+
+```bash
+npm install
+```
+
+This is a **Next.js** app, using **SASS Modules** for the styling. It uses **Typescript** and **ESLint** for the enforcement of the code style.
+
+**Storybook** is used for the development and testing of components in isolation.
 
 ## Getting Started
 
-First, run the development server:
+### Running the development server
+
+Once the requirements are fulfilled, the development server can be started with
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How it works
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+In order to make the experience usable, we have to make the user select the country before being able to type the city with the autocompletion feature. The autocompletion feature only works when there are three or more letters as the prefix to search the city.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
