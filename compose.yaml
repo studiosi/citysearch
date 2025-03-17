@@ -1,5 +1,6 @@
 services:
   citysearch:
+    image: ghcr.io/studiosi/citysearch
     build: .
     ports:
       - "3000:3000"
