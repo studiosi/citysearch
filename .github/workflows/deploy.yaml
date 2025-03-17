@@ -5,18 +5,15 @@ on:
     branches: [ "main" ]
 
 jobs:
-  deploy:
+  build_and_publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Deploy the app
+      - name: Build and push the image
         with:
           ghcr_username: ${{ secrets.GHCR_USERNAME }}
           ghcr_access_token: ${{ secrets.GHRC_ACCESS_TOKEN }}
-          coolify_webhook: ${{ secrets.COOLIFY_WEBHOOK }}
-          coolify_api_token: ${{ secrets.COOLIFY_API_TOKEN }}
         run : |
           docker login --username "$ghcr_username" --password "$ghcr_access_token" ghcr.io
           docker compose build
           docker push ghcr.io/studiosi/citysearch
-          curl --fail-with-body --request GET "$coolify_webhook" --header 'Authorization: Bearer "$coolify_api_token"'
